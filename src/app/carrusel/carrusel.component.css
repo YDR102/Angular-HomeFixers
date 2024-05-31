@@ -1,0 +1,36 @@
+img {
+    height: 86vh;
+    min-width: 100vw;
+    object-fit: cover;
+}
+
+#carouselExampleIndicators {
+    margin-top: 40px;
+    width: 100vw;
+}
+
+@media screen and (max-width: 1360px){
+    img {
+        height: 66vh;
+    }
+}
+@media screen and (max-width: 1025px){
+    img {
+        height: 60vh;
+    }
+}
+@media screen and (max-width: 750px){
+    img {
+        height: 50vh;
+    }
+}
+@media screen and (max-width: 550px){
+    img {
+        height: 35vh;
+    }
+}
+@media screen and (max-width: 400px){
+    img {
+        height: 28vh;
+    }
+}

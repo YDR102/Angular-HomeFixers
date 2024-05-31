@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    color-scheme: dark;
+    overflow-x: hidden;
+    --color-primario: rgba(71, 212, 255, 0.8);
+    --color-secundario: rgba(28, 113, 182, 0.918);
+    --color-ocuro: #252A2E
+}
+
+.titlo-prin{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}

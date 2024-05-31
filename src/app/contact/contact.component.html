@@ -1,0 +1,37 @@
+<div id="contacto" class="contacto container">
+    <div class="contenido-seccion">
+        <h1 class="titlo-prin">CONTACTO</h1>
+        <div class="fila">
+            <!-- Formulario -->
+            <div class="col">
+            <form [formGroup]="contact" (ngSubmit)="enviar()" action="from.php" method="post">
+            <ng-container>
+                <div class="text-danger" *ngIf="hasErrors('nombre', 'required')">Campo requerido</div>
+                <input [ngClass]="{'is-invalid': hasErrors('nombre', 'required')}" formControlName="nombre" type="text" name="nombre" placeholder="Tu Nombre" required>
+            </ng-container>
+
+                <input formControlName="tef" type="text" name="tef" placeholder="Número telefónico">
+
+            <ng-container>
+                <ng-container>
+                    <div class="text-danger" *ngIf="hasErrors('email', 'email')">Email invalido</div>
+                </ng-container>
+                <div class="text-danger" *ngIf="hasErrors('email', 'required')">Email Necesario</div>
+                <input [ngClass]="{'is-invalid': hasErrors('email', 'required') || hasErrors('email', 'email')} " formControlName="email" type="email" name="email" placeholder="Dirección de correo" required>
+            </ng-container>
+
+            <ng-container>
+                <div class="text-danger" *ngIf="hasErrors('asunto', 'required')">Asunto requerido</div>
+                <input [ngClass]="{'is-invalid': hasErrors('asunto', 'required')}" formControlName="asunto" type="text" name="asunto" placeholder="Asunto" required>
+            </ng-container>
+
+            <ng-container>
+                <div class="text-danger" *ngIf="hasErrors('mensaje', 'required')">Mensaje requerido</div>
+                <textarea [ngClass]="{'is-invalid': hasErrors('mensaje', 'required')}" formControlName="mensaje" id="" cols="30" rows="10" name="mensaje" placeholder="Mensaje" required></textarea>
+            </ng-container>
+                <input id="button" type="submit" value="Enviar Mensaje">
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
