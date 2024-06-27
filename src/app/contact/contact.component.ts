@@ -47,6 +47,7 @@ export class ContactComponent implements OnInit, OnDestroy {
     }
 
     const datosFormulario = this.contact.value;
+    Notiflix.Loading.standard()
 
     this.correoService.enviarCorreo(datosFormulario).subscribe(
       response => {
