@@ -26,13 +26,8 @@
     font-size: 18px;
     resize: none;
 }
-.contacto .content-form input:focus {
+.contacto .content-form .form-control:focus {
     background: linear-gradient(var(--color-ocuro) 93%, #0099ff);
-    color: #fff;
-    outline: none;
-}
-.contacto .content-form textarea:focus {
-    background: linear-gradient(var(--color-ocuro) 98.4%, #0099ff);
     color: #fff;
     outline: none;
 }
