@@ -7,15 +7,15 @@
     max-width: 1100px;
     margin: auto;
 }
-.contacto .fila{
+.contacto .formulario{
     display: block;
 }
-.contacto .col{
+.contacto .content-form{
     width: 100%;
     padding: 10px;
     position: relative;
 }
-.contacto .col input, .contacto .col textarea{
+.contacto .content-form input, .contacto .content-form textarea{
     display: block;
     width: 100%;
     padding: 18px;
@@ -26,23 +26,22 @@
     font-size: 18px;
     resize: none;
 }
-.contacto .col input:focus {
+.contacto .content-form input:focus {
     background: linear-gradient(var(--color-ocuro) 93%, #0099ff);
     color: #fff;
     outline: none;
 }
-.contacto .col textarea:focus {
+.contacto .content-form textarea:focus {
     background: linear-gradient(var(--color-ocuro) 98.4%, #0099ff);
     color: #fff;
     outline: none;
 }
-.contacto .col input::placeholder, .contacto .col textarea::placeholder{
+.contacto .content-form input::placeholder, .contacto .content-form textarea::placeholder{
     color: #fff;
 }
 .contacto #button{
     cursor: pointer;
     background-color: transparent;
-    border: 2px solid #fff;
     border: 1px solid #000000;
     width: fit-content;
     display: block;
@@ -53,7 +52,7 @@
     position: relative;
     z-index: 10;
 }
-.contacto .col .info{
+.contacto .content-form .info{
     position: absolute;
     top: 40%;
     background-color: #252A2E;
@@ -62,13 +61,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.contacto .col .info ul{
+.contacto .content-form .info ul{
     list-style: none;
 }
-.contacto .col .info ul li{
+.contacto .content-form .info ul li{
     margin-bottom: 20px;
 }
-.contacto .col .info ul li i{
+.contacto .content-form .info ul li i{
     color: var(--color-primario);
     display: inline-block;
     margin-right: 20px;
@@ -80,10 +79,10 @@
         background-position: center;
         background-attachment: fixed;
     }
-    .contacto .fila{
+    .contacto .formulario{
         display: block;
     }
-    .contacto .fila .col{
+    .contacto .formulario .content-form{
         width: 100%;
     }
 }

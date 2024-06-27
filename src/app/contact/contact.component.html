@@ -1,36 +1,53 @@
 <div id="contacto" class="contacto container">
     <div class="contenido-seccion">
         <h1 class="titlo-prin">CONTACTO</h1>
-        <div class="fila">
+        <div class="formulario">
             <!-- Formulario -->
-            <div class="col">
-            <form [formGroup]="contact" (ngSubmit)="enviar()" action="from.php" method="post">
-            <ng-container>
-                <div class="text-danger" *ngIf="hasErrors('nombre', 'required')">Campo requerido</div>
-                <input [ngClass]="{'is-invalid': hasErrors('nombre', 'required')}" formControlName="nombre" type="text" name="nombre" placeholder="Tu Nombre" required>
-            </ng-container>
+            <div class="content-form">
+                <form [formGroup]="contact" (ngSubmit)="enviarCorreo()">
+                    <!-- Nombre -->
+                    <div class="form-group">
+                        <label for="nombre">Tu Nombre</label>
+                        <input formControlName="nombre" type="text" id="nombre" class="form-control"
+                            placeholder="Tu Nombre">
+                        <div *ngIf="hasErrors('nombre', 'required')" class="text-danger">Nombre requerido</div>
+                    </div>
 
-                <input formControlName="tef" type="text" name="tef" placeholder="Número telefónico">
+                    <!-- Número telefónico -->
+                    <div class="form-group">
+                        <label for="tef">Número telefónico</label>
+                        <input formControlName="tef" type="text" id="tef" class="form-control"
+                            placeholder="Número telefónico">
+                    </div>
 
-            <ng-container>
-                <ng-container>
-                    <div class="text-danger" *ngIf="hasErrors('email', 'email')">Email invalido</div>
-                </ng-container>
-                <div class="text-danger" *ngIf="hasErrors('email', 'required')">Email Necesario</div>
-                <input [ngClass]="{'is-invalid': hasErrors('email', 'required') || hasErrors('email', 'email')} " formControlName="email" type="email" name="email" placeholder="Dirección de correo" required>
-            </ng-container>
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Dirección de correo</label>
+                        <input formControlName="email" type="email" id="email" class="form-control"
+                            placeholder="Dirección de correo">
+                        <div *ngIf="hasErrors('email', 'required')" class="text-danger">Email necesario</div>
+                        <div *ngIf="hasErrors('email', 'email')" class="text-danger">Email inválido</div>
+                    </div>
 
-            <ng-container>
-                <div class="text-danger" *ngIf="hasErrors('asunto', 'required')">Asunto requerido</div>
-                <input [ngClass]="{'is-invalid': hasErrors('asunto', 'required')}" formControlName="asunto" type="text" name="asunto" placeholder="Asunto" required>
-            </ng-container>
+                    <!-- Asunto -->
+                    <div class="form-group">
+                        <label for="asunto">Asunto</label>
+                        <input formControlName="asunto" type="text" id="asunto" class="form-control"
+                            placeholder="Asunto">
+                        <div *ngIf="hasErrors('asunto', 'required')" class="text-danger">Asunto requerido</div>
+                    </div>
 
-            <ng-container>
-                <div class="text-danger" *ngIf="hasErrors('mensaje', 'required')">Mensaje requerido</div>
-                <textarea [ngClass]="{'is-invalid': hasErrors('mensaje', 'required')}" formControlName="mensaje" id="" cols="30" rows="10" name="mensaje" placeholder="Mensaje" required></textarea>
-            </ng-container>
-                <input id="button" type="submit" value="Enviar Mensaje">
-            </form>
+                    <!-- Mensaje -->
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea formControlName="mensaje" id="mensaje" class="form-control" rows="5"
+                            placeholder="Mensaje"></textarea>
+                        <div *ngIf="hasErrors('mensaje', 'required')" class="text-danger">Mensaje requerido</div>
+                    </div>
+
+                    <!-- Botón de enviar -->
+                    <input id="button" type="submit" value="Enviar Mensaje">
+                </form>
             </div>
         </div>
     </div>
